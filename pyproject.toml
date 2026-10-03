@@ -1,0 +1,14 @@
+[project]
+name = "contrast-ratio"
+version = "0.1.0"
+description = "WCAG contrast ratios and pass or fail against AA and AAA."
+requires-python = ">=3.10"
+dependencies = []
+readme = "README.md"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
