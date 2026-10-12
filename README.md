@@ -49,3 +49,10 @@ you compare against a tool that uses the IEC number you may see tiny differences
 in the third decimal place. Since this library rounds to two decimals the
 discrepancy almost never surfaces, but it is the one place a careful reader
 will spot a divergence from a different implementation.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
